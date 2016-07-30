@@ -1,0 +1,3 @@
+#!/bin/bash
+PROJDIR="$(pwd)/$1"
+nodemon --exec "pdflatex -output-directory='$PROJDIR'" $1/$1.tex
