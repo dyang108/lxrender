@@ -16,7 +16,7 @@ If the above has no output, you need to link the command to your bin, like so:
 ```
 ln -s /Library/TeX/Distributions/Programs/texbin/* /usr/local/bin
 ```
-Run the following command from within this directory to 
+Run the following command from within this directory to create a command
 ```
 ln -s $(pwd)/lxrender /usr/local/bin/lxrender
 ```
@@ -28,4 +28,4 @@ To run lxrender, run:
 `lxrender {{directory_name}} {{filename.tex}}`
 where directory_name is the directory where the .tex file is, and filename is the name of the .tex file.
 
-Input files are referenced from the directory where this repository is cloned (the directory containing the `lxrender` script). Thus, you should place image files in this directory.
+Input files are referenced from the directory where the lxrender command is run. Thus, you should place image/other extension files in this directory.
