@@ -1,3 +1,6 @@
 #!/bin/bash
 PROJDIR="$(pwd)/$1"
-nodemon --exec "pdflatex -output-directory='$PROJDIR'" $1/$2
+for filename in "${@:2}"
+do
+  nodemon --exec "texfot pdflatex -output-directory='$PROJDIR'" $1/$filename &
+done
