@@ -1,6 +1,9 @@
 #!/bin/bash
 PROJDIR="$(pwd)/$1"
+allnames=""
 for filename in "${@:2}"
 do
-  nodemon --exec "texfot pdflatex -output-directory='$PROJDIR'" $1/$filename &
+  allnames+=" $1/$filename"
 done
+echo "Rendering the following files: $allnames"
+nodemon --exec "texfot pdflatex -output-directory='$PROJDIR'" $allnames
