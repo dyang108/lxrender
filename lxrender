@@ -6,4 +6,4 @@ do
   allnames+=" $1/$filename"
 done
 echo "Rendering the following files: $allnames"
-nodemon --exec "texfot pdflatex -output-directory='$PROJDIR'" $allnames
+nodemon --exec "texfot latexmk -pdf -output-directory='$PROJDIR'" $allnames
