@@ -1,9 +1,14 @@
 #!/bin/bash
-PROJDIR="$(pwd)/$1"
-allnames=""
-for filename in "${@:2}"
-do
-  allnames+=" $1/$filename"
-done
-echo "Rendering the following files: $allnames"
-nodemon --exec "texfot latexmk -pdf -output-directory='$PROJDIR'" $allnames
+if test $# -lt 2; then
+    echo "Usage: lxrender {{directory_name}} {{filename.tex}} [{{more filenames here}}]"
+fi
+if test $# -gt 1; then
+    PROJDIR="$(pwd)/$1"
+    allnames=""
+    for filename in "${@:2}"
+    do
+      allnames+=" $1/$filename"
+    done
+    echo "Rendering the following files: $allnames"
+    nodemon --exec "texfot latexmk -pdf -output-directory='$PROJDIR'" $allnames
+fi

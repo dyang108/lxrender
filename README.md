@@ -16,6 +16,7 @@ If the above has no output, you need to link the command to your bin, like so:
 ```
 ln -s /Library/TeX/Distributions/Programs/texbin/* /usr/local/bin
 ```
+Note: I actually had to run the command replacing the path to texbin above with `/Library/TeX/Distributions/TeXLive-2016.texdist/Contents/Programs/texbin/*`
 Run the following command from within this directory to create a command
 ```
 ln -s $(pwd)/lxrender /usr/local/bin/lxrender
