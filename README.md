@@ -2,6 +2,8 @@
 Clone this repository and write all your LaTeX files easily, regenerating on the fly without any fancy extra tools.
 
 ### Installation
+First [Install MacTeX](https://tug.org/mactex/mactex-download.html) using Safari.
+
 Try this: `bash ./config.sh`. If it doesn't work, install manually:
 
 Ensure that you have npm [installed](https://nodejs.org/en/download/). Then:
